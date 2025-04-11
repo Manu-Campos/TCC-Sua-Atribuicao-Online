@@ -1,0 +1,76 @@
+.tabelaFixa table th:first-child { border-radius: 10px 0 0 0; }
+.tabelaFixa table th {
+    background-color: var(--Cor-3-degrade-2);
+    color: #fff;
+    border: 1px solid var(--Cor-3-degrade-2);
+}
+.tabelaFixa table tr { background-color: var(--Cor-3-degrade-7) }
+.tabelaFixa tbody td { border: 1px solid var(--Cor-3-degrade-2); }
+
+.tabelaFixa::-webkit-scrollbar-thumb { background: var(--Cor-3-degrade-2); }
+
+/* Tamanhos dos td's */
+.Input { width: 4%; }
+.Ano { width: 8%; }
+.Disciplina { width: 20%; }
+
+#Arquivo 
+{
+    width:400px;
+}
+
+#btnExportar  {
+    width: 20%;
+}
+
+.areaAnexos {
+    width:20% !important;
+}
+
+/* Estilização dos checkbox da tabela */
+.linhaSelecionada {
+    background-color: var(--Cor-3-degrade-6) !important;
+}
+
+.checkbox:not(:disabled) { background-color: var(--Cor-3-degrade-7) !important; }
+.checkbox::before { border: thin solid var(--Cor-3-degrade-3); }
+.checkbox:checked::before { background-color: var(--Cor-3-degrade-3); }
+
+.botao {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.botao p { font-size: 15px !important; }
+ 
+#areaFiltros {
+    overflow: auto;
+    width: 55%;
+    display: flex;
+    gap: 30px;
+    padding: 15px 0 10px 0;
+}
+
+#areaFiltros::-webkit-scrollbar {
+    width: 2px !important;
+    height: 6px !important;
+}
+
+#areaFiltros::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+#areaFiltros::-webkit-scrollbar-thumb {
+    background: var(--Cor-1); 
+    border-radius: 20px;
+    border: 0;
+    padding-top: 10px;
+}
+
+@media screen and (max-width: 769px) {    
+    
+  #selectEscola{width: 100% !important;}
+
+}
+

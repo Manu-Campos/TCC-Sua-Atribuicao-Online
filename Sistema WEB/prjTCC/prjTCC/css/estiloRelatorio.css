@@ -1,0 +1,33 @@
+input[type="submit"] { background-color: var(--Cor-4); }
+
+
+.areaConteudo { flex-direction: column; align-items: end; }
+
+/* Estilização das tabelas */
+.tabelaFixa table th {
+    background-color: var(--Cor-4-degrade-3);
+    color: #000;
+}
+.tabelaFixa table tr { background-color: #fff; }
+.tabelaFixa table td, .tabelaFixa table th { border: 1px solid var(--Cor-4); }
+
+.tabelaFixa::-webkit-scrollbar-thumb { background: var(--Cor-4-degrade-3); }
+
+/* Tamanhos dos td's */
+.Ano, .Tipo, .Periodo { width: 8%; }
+.Disciplina { width: 20%; }
+
+.botao {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.botao p { font-size: 17px !important; }
+
+.botao input, .botao p { margin-top: 35px; }
+
+@media screen and (max-width: 769px) {
+    #selectEscola { width: 100% !important; }
+
+}

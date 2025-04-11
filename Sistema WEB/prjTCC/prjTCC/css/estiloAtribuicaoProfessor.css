@@ -1,0 +1,173 @@
+h3 { color: var(--Cor-6); margin: 40px 0 14px 0; }
+h4 { font-size: 1.8rem; }
+h3, h4 { font-family: var(--Font-family-semibold); }
+
+label { font-size: 1.8rem; }
+button { margin-top: 25px; }
+
+.areaConteudo { align-items: normal; gap: 0;}
+#areaSuaVez{
+    width: 20%;
+}
+
+/* Estilização selects */
+select
+{
+    background-image: url('../imagens/icones/setaPreta.png');
+    background-color: #ffcaba;
+}
+
+input[type="text"] {
+    background-color: #ffcaba;
+    border-radius: var(--Border-radius);
+    color: black;
+}
+
+#aguardando, #selects, #selectsPEBI {
+    display: flex;
+    width: 100%;
+}
+#aguardando { gap: 7px; }
+#selects { gap: 40px; }
+#selectsPEBI { gap: 80px; }
+
+#jornada select, #escolaSede select, #segundaEscola select, #selectsPEBI input[type="text"] {
+    width: 100%;
+}
+#jornada { width: 18%; }
+#escolaSede, #segundaEscola { /*width: 28%;*/ }
+
+#selecoes { width: 100%; }
+
+/* Cores dos "aguardando período de..." */
+#primeiraAtribuicao { color: var(--Cor-5); }
+#remocao { color: var(--Cor-3-degrade-3); }
+
+/* Estilização dos botões */
+input[type="submit"].btnConfirmar {
+    background-color: var(--Cor-4) !important;
+}
+
+input[type="submit"].btnAtribuir, button.btnAtribuir , button.btnIniciarAtribuicao{
+    background-color: var(--Cor-5);
+}
+
+#btnRemocao, #btnConfirmarEscola { background-color: var(--Cor-3); }
+#btnConfirmarEscola { justify-content: flex-start; }
+
+#botoesRemocao { 
+    display: flex;
+    gap: 20px;
+}
+
+/* Pop-Ups */
+.areaPopUp { width: 30%; padding: 20px; }
+
+.popUpPreAtribuicao h2 { text-align: center; }
+
+.popUpProfessor h2 {
+    text-align: center;
+}
+
+.popUpProfessor {
+    display: flex;
+    padding-bottom: 20px !important;
+    gap: 20px;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+}
+
+.popUpProfessor div { display: flex; gap: 20px; }
+
+.popUpProfessor input, .popUpProfessor button {
+    margin-top: 0px !important;
+    background-color: var(--Cor-5) !important;
+    cursor: pointer;
+}
+
+/* Estilização das tabelas pré-atribuição */
+#turma { width: 23%; }
+#periodo { width: 24%; }
+#selecao { width: 8%; }
+
+#tabelas { display: flex; gap: 40px; }
+#tabelas h3 { margin: 0px 0 40px 0; }
+
+#tabela1, #tabela2 { width: 50%; }
+
+#tabela2 div { border-radius: 10px; }
+
+/* Estilização das tabelas pré-atribuição */
+.tabelaPreAtribuicaoProfessor {
+    max-height: 350px !important;
+}
+.tabelaPreAtribuicaoProfessor table th {
+    background-color: var(--Cor-4-degrade-4);
+    color: #000;
+}
+.tabelaPreAtribuicaoProfessor table tr, .tabelaPrimeiraAtribuicao table tr { background-color: #fff; }
+.tabelaPreAtribuicaoProfessor table td, .tabelaPreAtribuicaoProfessor table th { border: 1px solid var(--Cor-4) !important; }
+
+.tabelaPreAtribuicaoProfessor::-webkit-scrollbar-thumb { background: var(--Cor-4); border: 3px solid #fff;  }
+
+.tabelaPreAtribuicaoProfessor .checkbox { background: none !important; }
+
+.tabelaAtribuicaoAtribuidor { border: 1px solid var(--Cor-3-degrade-2); border-radius: 10px 10px 10px 10px; }
+.tabelaAtribuicaoAtribuidor th, td {
+    border-right: 1px solid var(--Cor-3-degrade-2);
+    border-bottom: 1px solid var(--Cor-3-degrade-2);
+} 
+
+.tabelaAtribuicaoAtribuidor th
+{
+    background-color: var(--Cor-3-degrade-5);
+    font-family: var(--Font-family-semibold);
+    color: var(--Cor-6);
+}
+
+/* Estilização das tabelas primeira atribuição */
+.tabelaPrimeiraAtribuicao table th {
+    background-color: var(--Cor-5-degrade-3);
+    color: #000;
+}
+.tabelaPrimeiraAtribuicao #linhaTabela td, .tabelaPrimeiraAtribuicao table th, #tabela2 .tabelaPrimeiraAtribuicao td { border: 1px solid var(--Cor-5) !important; }
+.tabelaPrimeiraAtribuicao::-webkit-scrollbar-thumb { background: var(--Cor-5); border: 3px solid #fff;  }
+
+/* Estilo checkbox pré-atribuição */
+.checkPreAtribuicao::before { border: thin solid var(--Cor-4); }
+.checkPreAtribuicao:checked::before { background-color: var(--Cor-4); }
+.tabelaPreAtribuicaoProfessor .linhaSelecionada { background-color: var(--Cor-4-degrade-7) !important; }
+
+/* Estilo checkbox 1º atribuição */
+.checkPrimeiraAtribuicao::before { border: thin solid var(--Cor-5); }
+.checkPrimeiraAtribuicao:checked::before { background-color: var(--Cor-5); }
+.tabelaPrimeiraAtribuicao .linhaSelecionada { background-color: var(--Cor-5-degrade-7) !important; }
+
+/* Estilização seleções de remoção de aulas */
+#areaSelecoes {
+    display: flex;
+    gap: 20px;
+    border-radius: 20px;
+    background-color: var(--Cor-3-degrade-7);
+    padding: 20px 15px;
+    flex-direction: column;
+}
+
+.selectEscola {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border-radius: 10px;
+}
+
+.checkboxEscola::before { border: thin solid #000; }
+.checkboxEscola:checked::before { background-color: var(--Cor-3); }
+
+.escolaSelecionada { background-color: var(--Cor-3-degrade-5); }
+
+/* Turma Indisponível */
+.turmaIndisponivel { background: #DDDDDD !important; }
+.turmaIndisponivel td { border: 1px solid var(--Cor-Alerta) !important; }
+.turmaIndisponivel img { width: 60%; }

@@ -1,0 +1,222 @@
+/* Estilização tabelas */
+.tabelaFixa thead th{
+    background-color: var(--Cor-3-degrade-5);
+    color: var(--Cor-6);
+    border: var(--Cor-3-degrade-2) 1px solid !important;
+}
+table th:last-child,table td:last-child { border-right: 0; }
+table tr { background-color: var(--Cor-6-degrade-7);}
+.tabelaFixa tbody td { border: 1px solid var(--Cor-3-degrade-2); }
+
+.tabelaFixa::-webkit-scrollbar-thumb { background: var(--Cor-5-degrade-3); }
+.tabelaFixa { width: 100%; height: auto; }
+
+.Posicao, .Codigo { width: 10%; }
+.Situacao { width: 15%; }
+.Nome { width: 30%; }
+#areaBtnConfirmaAtribuidor{
+    justify-content:end;
+}
+.InicioTitulo {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    gap: 10px;
+    align-items: center;
+    flex-direction: row;
+}
+.InicioTitulo h3 { color:var(--Cor-6);}
+.InicioTitulo p {
+    margin-top: 5px;
+    font-family: var(--Font-family-regular);
+    font-weight: bold; 
+    font-size: var(--Subtitulo-font-size);
+}
+#areaConteudoInferior_pnlTabelaAtribuir {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+}
+
+#Aguardando { flex-direction: column; }
+
+.tituloPEBI {
+    flex-direction: column !important;
+    align-items: normal !important;
+    gap: 5px !important;
+}
+
+/* Estilização fases */
+.Fases { min-width: 50px; width: max-content; display: flex; align-items: center; padding: 5px;}
+
+/* Estilização geral */
+.areaConteudo {
+    flex-direction: column;
+    align-items: end;
+    gap: 30px;
+}
+.textCiencia {
+    font-style: italic;
+    font-family: var(--Font-family-regular);
+    font-size: 24px;
+}
+
+.areaAguardandoFase {
+    align-items: start !important;
+}
+
+#areaAtribuirProfessor {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+input[type="submit"]{ background-color: var(--Cor-3-degrade-2); }
+
+select
+{
+    background-image: url('../imagens/icones/setaPreta.png');
+    background-color: var(--Cor-3-degrade-5);
+    width: 20%; 
+}
+
+/* Estilização informação do professor atribuído */
+#infoProfessor {
+    height: 160px;
+    background-color: var(--Cor-3-degrade-5);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    background-image: url(../imagens/grafismoAtribuirProfessor.png);
+    background-repeat: no-repeat;
+    background-position-x: 105%;
+    background-position-y: -6px;
+}
+#infoProfessor h1 { font-size: var(--Titulo-h4); margin: 0px; }
+#infoProfessor h2, #infoProfessor h3 { margin: 0; font-size: 1.6rem; }
+#infoProfessor h1, #infoProfessor h2, #infoProfessor h3 { color: #000; }
+
+#imgPerfilProfessor img { width: 120px; height: 120px; padding: 20px; }
+
+/* Estilização fases da atribuição */
+#areaFaseAtual, #Remocao, #Inicio { display: flex; }
+#areaFaseAtual { height: 30px; color: var(--Cor-6-degrade-7); }
+
+#PreAtribuicao { background-color: var(--Cor-4); border-radius: 20px 0 0 20px; }
+#PrimeiraAtribuicao { background-color: var(--Cor-5); }
+#Remocao {
+    background-color: var(--Cor-3-degrade-2);
+    /*width: max-content;*/
+    padding: 0 5px;
+    align-items: center;
+    color: var(--Cor-6-degrade-7);
+    text-align: center;
+}
+
+#SegundaAtribuicao { background-color: var(--Cor-3); }
+#CargaComplementar { background-color: var(--Cor-1-degrade-1); }
+#Trocas { background-color: var(--Cor-2-degrade-1); border-radius: 0 20px 20px 0 ; }
+
+#Manutencao { background-color: var(--Cor-Alerta); border-radius: 20px; padding: 15px }
+
+.inicioArea {
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+#areaAdicionarProfessor
+{
+    width: 40%;
+    flex-direction: column;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    z-index: 1;
+    align-items: normal;
+}
+
+#dadosNovoProfessor
+{
+    display: flex;
+    flex-wrap: wrap;
+    gap:30px;
+    justify-content: space-between;
+}
+
+#txtEmail { width: 45%; }
+#txtTelefone { width: 20%; }
+#txtDataN, #txtTipo { width: 25%; }
+#txtDisciplina { width: 35%; }
+
+#txtDisciplina select, #txtTipo select  
+{
+    width: 100%;
+    background-color: var(--Cor-Input);
+    border: 2px solid var(--Cor-2);
+}
+
+/* Estilização tabela do adicionar professor */
+#areaAdicionarProfessor .tabelaFixa thead th {
+    background-color: var(--Cor-1-degrade-6);
+    border: var(--Cor-2-degrade-3) 1px solid !important;
+}
+#areaAdicionarProfessor .tabelaFixa tbody td { border: 1px solid var(--Cor-2-degrade-3); }
+#areaAdicionarProfessor .tabelaFixa{margin-top: 20px;}
+
+#areaAdicionarProfessor .tabelaFixa::-webkit-scrollbar-thumb { background: var(--Cor-2-degrade-3); }
+
+#areaAdicionarProfessor .checkbox::before{border:thin solid var(--Cor-2-degrade-3); }
+#areaAdicionarProfessor .checkbox:checked::before{background-color: var(--Cor-2-degrade-3) !important;}
+
+#areaAdicionarProfessor #btnSalvar {text-align: end;}
+
+#areaAdicionarProfessor #btnSalvar button {background-color: var(--Cor-1);}
+
+.linhaSelecionada { background-color: var(--Cor-2-degrade-7) !important; }
+
+.botao {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#Aguardando #tituloPEBI .InicioTitulo {
+    flex-direction: column;
+    align-items: start;
+    gap: 0;
+}
+
+@media screen and (max-width: 1024px) {
+    select {
+        width: 30%;
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    select {
+        width: 30%;
+    }
+
+    #infoProfessor {
+        flex-direction: column;
+        height: 40vh;
+        background-position: bottom -40px right -40px;
+        background-repeat: no-repeat;
+        background-position-x: 27px;
+        background-position-y: 80px;
+        background-size: 100%;
+        padding: 10px;
+    }
+
+    #tabela1, #tabela2 {
+        width: 100%;
+    }
+
+    .selecoesProfessorPerdeuTempo #tabelas #tabela2 {
+        width: 100%;
+    }
+}

@@ -1,0 +1,18 @@
+.txtDiretor{width: 100%;}
+.txtProntuario{width:20%;}
+#digitarFiltro{width: 100%;}
+#digitarFiltro div { width: 15%; cursor: pointer;}
+#digitarFiltro div img { width: 30%;}
+
+#areaDadosDiretor
+{
+    flex-direction: column;
+    width: 40%;
+}
+
+#areaDadosDiretor #txtEmail {width: 45%;}
+#areaDadosDiretor #txtTelefone {width: 25%;}
+
+#infoDiretor {display: flex; flex-wrap: wrap; gap: 30px; margin-top: 35px;}
+#botoes{display: flex; justify-content: center;gap:30px;margin-top: 30px;}
+#chis {cursor:pointer;}

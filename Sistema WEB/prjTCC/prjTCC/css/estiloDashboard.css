@@ -1,0 +1,128 @@
+.conteudo-superior { justify-content: space-between; }
+
+#nomeUsuario h1 { 
+    font-size: var(--Titulo-h4);
+    font-family: var(--Font-family-medium);
+    color: var(--Cor-1); 
+}
+
+#itensDashboard {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+#dashboardDados {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: space-between;
+    align-items: center;
+    gap: 20px;
+    justify-content: space-between;
+}
+/*.graficoAtribuicao {
+    width: 410px;
+    height: 173px;
+}*/
+
+#fase {
+    display: flex;
+    width: 30%;
+    margin: 0;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 20px;
+    background-color: white;
+    padding: 10px;
+}
+
+#faseDashboard {
+    width: 90%;
+}
+
+#andamentoBloco {
+    display: flex;
+    width: 65%;
+    margin: 0;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 0;
+    background-color: white;
+    padding: 10px;
+    border-radius: 20px;
+}
+
+#andamentoDashboard {
+    width: 100%;
+    margin: 0;
+}
+
+#professores {
+    display: flex;
+    width: 50%;
+    margin: 0;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 20px;
+    background-color: white;
+    padding: 10px;
+}
+
+#professoresDashboard {
+    width: 100%;
+    margin: 0;
+}
+
+#nomeProfessorVez
+{
+    font-size: 14.5px;
+    font-weight: bold;
+    margin: 25px 0 0px 0;
+    color: var(--Cor-1);
+}
+#areaImagensProfs {
+    display: flex;
+    gap: 0.5px;
+}
+#professoresAtribuindo
+{
+    background-color:white;
+    border-radius:20px;
+    width:20%;
+    padding:20px;
+    box-sizing:border-box;
+}
+#professoresAtribuindo p:first-child {
+    margin: 0 0 20px 0;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.progress {
+    height: 15px;
+    background-color: #777;
+    position: relative;
+}
+
+.highcharts-title {
+    transform: translateY(10px, 10px);
+}
+
+.highcharts-a11y-proxy-element {
+}
+
+/*.highcharts-legend-item text,
+.highcharts-data-labels text,
+.highcharts-tooltip text {
+    fill: none !important;
+    stroke: none !important;
+}*/
+
+@media screen and (max-width: 768px) {
+    .conteudo-superior { padding-bottom: 0; }
+}
+

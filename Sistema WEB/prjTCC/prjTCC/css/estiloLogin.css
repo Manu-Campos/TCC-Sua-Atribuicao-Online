@@ -1,0 +1,128 @@
+main { 
+    height: 100vh; 
+    display: flex; 
+    position: relative;
+    background-color: var(--Cor-6-degrade-7);
+}
+
+input {
+    width: 350px;
+    height: 20px;
+    border-radius: 0 20px 20px 0;
+    border: none;
+    background-color: var(--Cor-2-degrade-7);
+    padding: var(--Input-padding);
+}
+input:-internal-autofill-selected 
+{
+        background-color: var(--Cor-2-degrade-7) !important;
+}
+ 
+input[type="submit"] {background-color: var(--Cor-1-degrade-1); margin-top:0;}
+
+#areaLogin, .areaCodigoEmail, #areaNovaSenha, #areaEmail, .areaEmail 
+{
+    width: 40%;
+}
+.pAlertaEmail,.pAlertaSenha
+{
+    text-align:end;
+    font-size:12px !important;
+    margin-top:10px;
+}
+.logoMenu, .login {
+    align-items: center;
+}
+.login { position: relative; width: 55%;}
+
+.logoMenu { width: 45%; background-color: var(--Cor-1); }
+.logoMenu img { width: 70%; }
+
+#areaEmail .digitarEmail, .areaCodigoEmail .digitarCodigo, #areaNovaSenha .digitarSenha, .areaEmail{
+    margin-top: 40px;
+    margin-bottom: 0px;
+}
+.boxEmail, .boxSenha {
+    margin-top: 35px;
+    margin-bottom: 0px;
+}
+.digitarCodigo {
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+.digitarEmail, .digitarSenha, .digitarCodigo {
+    display: flex;
+    width: 100%;
+}
+.digitarEmail input, .digitarSenha input, .digitarCodigo input { width: 85% !important; }
+
+.digitarEmail div, .digitarSenha div, .digitarCodigo div {
+    background-color: var(--Cor-1-degrade-1);
+    width: 18%;
+    display: grid;
+    justify-items: center;
+    border-radius: 20px 0 0 20px;
+}
+.digitarEmail div img, .digitarSenha div img, .digitarCodigo div img { margin: auto; width: 45%; }
+
+.esqueceuSenha { text-align: end; margin-right:5px; }
+.esqueceuSenha a p {
+    margin-top: 20px;
+    margin-bottom: 30px;
+    font-size: 13px; 
+    font-weight:bold;
+    cursor: pointer;
+    color: var(--Cor-1);
+    text-decoration: none;
+}
+
+#areaLogin p, #areaCodigoEmail p, #areaNovaSenha p, #areaEmail p {
+    font-size: var( --Paragrafo-size-regular);
+    color: var(--Cor-1);
+}
+
+#areaLogin .botaoEntrar, #areaCodigoEmail .botaoEntrar, #areaNovaSenha .botaoEntrar, #areaEmail .botaoEntrar { margin-top: 40px; }
+.botaoEntrar , .logoMenu, .login, button { display: flex; justify-content: center; }
+
+.imgCentral, .imgLateral { position: absolute; height: 100%;}
+.imgLateral { right: 0; }
+.imgCentral {
+    top: 50%;
+    left: 46.5%;
+    transform: translate(-50%, -50%);
+}
+/* Responsivo */
+@media screen and (max-width: 850px) {    
+    
+    svg {width: 0;}
+    main{flex-direction: column;}
+
+   /* .logoBranca {
+        width: 49%;
+    }*/
+
+    .logoMenu img {
+        width: 49%;
+    }
+
+    .digitarSenha div img {
+        margin: auto;
+        width: 45%;
+    }
+
+    .logoMenu {
+        width: 100%;
+        height: 20vh;
+    }
+    .login
+    {
+        width: 90%;
+        margin: 20px auto;
+        position: unset;
+    }
+    #areaLogin, #areaEmail, .areaEmail 
+    {
+        width: 100%;
+    }
+
+}

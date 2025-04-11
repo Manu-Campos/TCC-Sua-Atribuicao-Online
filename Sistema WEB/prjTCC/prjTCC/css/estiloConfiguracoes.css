@@ -1,0 +1,290 @@
+#areaConfiguracao, #tituloAssinatura, .divButton, .conteudo-esquerda, #areaAssinatura, #dadosSignatario, #areaAssinaturaSeta, #areaEditarAssinatura
+,#menuEditarAssinatura,#tipoTexto,.areaAssinaturaTexto,#Assinatura,.linhaDados { display: flex; }
+
+#areaConfiguracao, #areaDados,#areaSenha,#menuEditarAssinatura,#tipoTexto,.linhaDados{ justify-content: space-between;}
+
+#tituloAssinatura,#dadosSignatario, #areaAssinaturaSeta, #areaPerfil,#areaEditarAssinatura {align-items:center;}
+
+#dadosSignatario, .conteudo-esquerda, #areaAssinatura,.areaAssinaturaTexto, #areaPerfil,#areaEditarAssinatura,#areaDados, #areaSenha{flex-direction: column;}
+
+ul { display: contents; }
+ul > li > div > input { display: none; }
+
+ul > li{
+    list-style: none;
+    width: max-content;
+    border-radius: 10px;
+}
+
+input:not(:disabled)
+{
+    background-color: var(--Cor-Input) ;
+    border: 2px solid var(--Cor-2);
+}
+#chis, #removerDadosDiretor {
+    width: 18px;
+    height: 18px;
+    position: relative;
+    bottom: 10px;
+    left: 5px;
+}
+#removerDadosDiretor {cursor:pointer;}
+.txtDataN p {
+    min-width:80px;
+    white-space: nowrap; 
+    overflow: hidden; 
+    text-overflow: ellipsis;
+}
+input:disabled { border: 2px solid var(--Cor-6-degrade-3); }
+
+.OpcaoSelecionada { background-color: var(--Cor-Foco); color: white; }
+.Canvas { width: 100%; height: 60px; background-color: var(--Cor-2-degrade-6); }
+
+.linhaDados:last-child{
+    margin-top:20px;
+    align-items:center;
+}
+.bloqueio {background-color:var(--Cor-1) !important;}
+#areaSenha, #areaDados {gap:30px;}
+#areaPerfil { gap: 25px; width: 25%; height: 60%;}
+
+#areaDadosDiretor .txtDataN {width:25%}
+
+#areaAssinatura {
+    background-color: var(--Cor-Input);
+    width: 90%;
+    border-radius: var(--Border-radius);
+    padding: 10px 15px;
+    box-sizing: border-box;
+    gap: 10px
+}
+
+#editarAssinatura { width: 100%; }
+#editarPerfil, #editarAssinatura 
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    gap: 25px;  
+}
+
+.conteudo-esquerda { gap: 60px; width: 65%; }
+
+#menuEditarAssinatura > ul > li > div > input[type="radio"]:checked label { background-color: black; }
+#espacinho{gap:20px;}
+
+.divButton {
+    margin: 0 0 0 auto;
+}
+
+.Senhas { width: 30%; }
+
+#editarPerfil .FotoUsuario {
+    background-color: var(--Cor-1);
+    width: 100px;
+    height: 98px;
+    border-radius: 50%;
+}
+
+input[type="submit"], #editarPerfil a { background-color: var(--Cor-1); }
+#editarPerfil a {
+    padding: 10px 25px;
+    border-radius: 20px;
+    color: white;
+    font-size: 1.5rem;
+}
+
+#editarPerfil .FotoUsuario .pnlIniciais { font-size: 40px }
+
+#Nome {
+    text-align: center;
+    font-size: var(--Subtitulo-font-size);
+    margin-bottom: 10px;
+    font-family: var(--Font-family-bold);
+}
+
+#Linha
+{
+    width: calc(100% + 80px);
+    background-color: var(--Cor-1);
+    height: 2px;
+}
+
+.tituloAssinatura {gap: 10px; display:flex;}
+
+#rubricaImg {width:15px;height: 15px;}
+
+.tituloAssinatura img:not(#rubricaImg) { width: 15px; height: 10px; }
+
+.NomeP, #Signatario {font-family: var(--Font-family-bold);}
+
+.LabelPequena { font-size: var(--Cargo-size); margin-top: 3px;}
+#tituloAparencia{margin:5px 0;}
+
+#Assinatura
+{
+     border-bottom: 2px solid var(--Cor-1); 
+     width: 100%; 
+     padding-bottom: 5px;
+     margin-top: 20px;
+}
+#Assinatura img { width: 14px; height: 14px; }
+
+.Assinatura
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 2px solid var(--Cor-1); 
+    width: 100%; 
+    padding-bottom: 5px;
+    margin-top: 20px;
+}
+.Assinatura div {width: 100%;}
+.Assinatura img { width: 14px; height: 14px; }
+
+#PuxarArquivo{
+    display: none;
+}
+
+#areaAssinaturaSeta
+{
+    width: calc(100% + 40px);
+    justify-content: end;
+}
+
+#SetaRubrica
+{
+    width:16px;
+    height:16px;
+    rotate:270deg;
+    position: relative;
+    left: 12px;
+}
+
+/*Editar assinatura*/
+#areaEditarAssinatura { gap: 30px; }
+
+#menuEditarAssinatura 
+{
+    width: 100%;
+    justify-content: center;
+    background-color: var(--Cor-2-degrade-7);
+    border-radius: 10px;
+}
+#menuEditarAssinatura div {padding: 15px 20px;}
+#menuEditarAssinatura div p { font-family: var(--Font-family-medium); font-size: var(--Paragrafo-size-medium); }
+#menuEditarAssinatura div:first-child { border-radius: 10px; }
+
+.areaAssinaturaTexto
+{
+    width: 49%;
+    background-color: var(--Cor-Input);
+    border-radius: var(--Border-radius);
+    padding: 20px 15px 40px 15px;
+    box-sizing: border-box;
+    gap:10px
+}
+
+#tipoTexto, select, #fontes { width: 100%; } 
+
+select { background-color: var(--Cor-2-degrade-6); }
+#btnCancelar
+{
+    background-color: var(--Cor-2-degrade-6);
+    color: var(--Cor-1);
+}
+.areaAssinaturaTexto #Assinatura {margin-top: 40px;}
+
+@media screen and (min-width: 481px) and (max-width: 1024px) {    
+    
+    #areaConfiguracao { 
+        flex-direction: column-reverse; 
+        gap: 50px;
+    }
+    
+    .conteudo-esquerda { width: 100%; }
+    
+    .areaConteudo { margin-top: 30px; }
+
+    #areaPerfil { 
+        width: 95%; 
+        flex-direction: row; 
+        justify-content: space-around;
+    }
+    
+    #editarPerfil, #editarAssinatura {
+        display: flex;
+        flex-direction: column;
+        align-items: center; 
+        gap: 25px;  
+    }
+    
+    #editarAssinatura .divButton { justify-content: center; }
+
+    #Linha { display: none; }
+}
+
+@media screen and (max-width: 768px) {
+
+    #areaPerfil {
+        width: 88%;
+    }
+
+    #areaEditarAssinatura {
+        top: 25%;
+        transform: translate(-50%, -25%);
+        left: 50%;
+        width: 90%;
+        box-sizing: border-box;
+    }
+
+    #menuEditarAssinatura {
+        justify-content: unset;
+        overflow: auto;
+    }
+
+    .linhaDados {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    #areaDadosDiretor
+    {
+        width: 80% !important;
+        padding: 30px;
+    }
+
+    #areaDadosDiretor h1 
+    {
+        margin: 10px 0;
+    }
+
+    #digitarFiltro div 
+    {
+        width: 20% !important;
+    }
+}
+
+input:-internal-autofill-selected {
+    background-color: var(--Cor-2-degrade-7) !important;
+}
+
+.loginErro, .loginAviso {
+    border: red 1px solid;
+    background-size: 16px;
+    background-position: right 15px bottom 50%;
+    background-repeat: no-repeat;
+}
+
+.loginAviso {
+    background-image: url("../imagens/icones/aviso.png");
+}
+
+.loginErro {
+    background-image: url("../imagens/icones/erro.png");
+}
+
+input[type="submit"] {
+    margin-top: 0;
+}

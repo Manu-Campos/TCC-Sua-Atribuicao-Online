@@ -1,0 +1,23 @@
+﻿
+* {
+    
+    text-align: center;
+}
+
+body {
+    all: unset;
+    background-color: var(--Cor-fundo);
+    margin:50%;
+}
+
+.Meio {
+    text-align:center;
+    padding-left:150px;
+    padding-top: 130px;
+    display: flex;
+    flex-direction: column;
+}
+
+img {
+    width: 18%;
+}

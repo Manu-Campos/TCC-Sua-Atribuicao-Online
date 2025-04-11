@@ -1,0 +1,538 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{9CA4F0A6-5EE9-4174-8BCC-21423427993F}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>prjTCC</RootNamespace>
+    <AssemblyName>prjTCC</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Aspose.Cells, Version=24.11.0.0, Culture=neutral, PublicKeyToken=716fcc553a201e56, processorArchitecture=MSIL">
+      <HintPath>..\packages\Aspose.Cells.24.11.0\lib\net40\Aspose.Cells.dll</HintPath>
+    </Reference>
+    <Reference Include="BouncyCastle.Cryptography, Version=2.0.0.0, Culture=neutral, PublicKeyToken=072edcf4a5328938, processorArchitecture=MSIL">
+      <HintPath>..\packages\BouncyCastle.Cryptography.2.4.0\lib\net461\BouncyCastle.Cryptography.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Protobuf, Version=3.26.1.0, Culture=neutral, PublicKeyToken=a7d26565bac4d604, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.Protobuf.3.26.1\lib\net45\Google.Protobuf.dll</HintPath>
+    </Reference>
+    <Reference Include="K4os.Compression.LZ4, Version=1.3.8.0, Culture=neutral, PublicKeyToken=2186fa9121ef231d, processorArchitecture=MSIL">
+      <HintPath>..\packages\K4os.Compression.LZ4.1.3.8\lib\net462\K4os.Compression.LZ4.dll</HintPath>
+    </Reference>
+    <Reference Include="K4os.Compression.LZ4.Streams, Version=1.3.8.0, Culture=neutral, PublicKeyToken=2186fa9121ef231d, processorArchitecture=MSIL">
+      <HintPath>..\packages\K4os.Compression.LZ4.Streams.1.3.8\lib\net462\K4os.Compression.LZ4.Streams.dll</HintPath>
+    </Reference>
+    <Reference Include="K4os.Hash.xxHash, Version=1.0.8.0, Culture=neutral, PublicKeyToken=32cd54395057cec3, processorArchitecture=MSIL">
+      <HintPath>..\packages\K4os.Hash.xxHash.1.0.8\lib\net462\K4os.Hash.xxHash.dll</HintPath>
+    </Reference>
+    <Reference Include="MailKit, Version=4.8.0.0, Culture=neutral, PublicKeyToken=4e064fe7c44a8f1b, processorArchitecture=MSIL">
+      <HintPath>..\packages\MailKit.4.8.0\lib\net47\MailKit.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=5.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.AsyncInterfaces.5.0.0\lib\net461\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.IdentityModel.Abstractions, Version=6.34.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.IdentityModel.Abstractions.6.34.0\lib\net472\Microsoft.IdentityModel.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.IdentityModel.JsonWebTokens, Version=6.34.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.IdentityModel.JsonWebTokens.6.34.0\lib\net472\Microsoft.IdentityModel.JsonWebTokens.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.IdentityModel.Logging, Version=6.34.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.IdentityModel.Logging.6.34.0\lib\net472\Microsoft.IdentityModel.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.IdentityModel.Tokens, Version=6.34.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.IdentityModel.Tokens.6.34.0\lib\net472\Microsoft.IdentityModel.Tokens.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Office.Interop.Excel.15.0.4795.1001\lib\net20\Microsoft.Office.Interop.Excel.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="MimeKit, Version=4.8.0.0, Culture=neutral, PublicKeyToken=bede1c8a46c66814, processorArchitecture=MSIL">
+      <HintPath>..\packages\MimeKit.4.8.0\lib\net47\MimeKit.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data, Version=9.1.0.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>..\packages\MySql.Data.9.1.0\lib\net462\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Collections.Specialized, Version=4.0.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Collections.Specialized.4.3.0\lib\net46\System.Collections.Specialized.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Configuration.ConfigurationManager, Version=8.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Configuration.ConfigurationManager.8.0.0\lib\net462\System.Configuration.ConfigurationManager.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Core" />
+    <Reference Include="System.Diagnostics.DiagnosticSource, Version=8.0.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Diagnostics.DiagnosticSource.8.0.1\lib\net462\System.Diagnostics.DiagnosticSource.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Formats.Asn1, Version=8.0.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Formats.Asn1.8.0.1\lib\net462\System.Formats.Asn1.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IdentityModel.Tokens.Jwt, Version=6.34.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IdentityModel.Tokens.Jwt.6.34.0\lib\net472\System.IdentityModel.Tokens.Jwt.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO.Pipelines, Version=5.0.0.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IO.Pipelines.5.0.2\lib\net461\System.IO.Pipelines.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Management" />
+    <Reference Include="System.Memory, Version=4.0.1.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.4.5.5\lib\net461\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net" />
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.6.0.0\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security" />
+    <Reference Include="System.Text.Encodings.Web, Version=4.0.5.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Text.Encodings.Web.4.7.2\lib\net461\System.Text.Encodings.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Json, Version=4.0.1.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Text.Json.4.7.2\lib\net461\System.Text.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Threading.Tasks.Extensions.4.5.4\lib\net461\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ValueTuple.4.5.0\lib\net47\System.ValueTuple.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Twilio, Version=7.5.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Twilio.7.5.0\lib\net462\Twilio.dll</HintPath>
+    </Reference>
+    <Reference Include="ZstdSharp, Version=0.8.0.0, Culture=neutral, PublicKeyToken=8d151af33a4ad5cf, processorArchitecture=MSIL">
+      <HintPath>..\packages\ZstdSharp.Port.0.8.0\lib\net462\ZstdSharp.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Classes - Estilo\botão.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Classes - Estilo\button.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Classes\Banco.cs" />
+    <Compile Include="Classes\Controllers\Diretores.cs" />
+    <Compile Include="Classes\Excel.cs" />
+    <Compile Include="Classes\Controllers\Disciplinas.cs" />
+    <Compile Include="Classes\Controllers\EscolaProfessores.cs" />
+    <Compile Include="Classes\Controllers\Instituicoes.cs" />
+    <Compile Include="Classes\Controllers\Supervisores.cs" />
+    <Compile Include="Classes\Models\Diretor.cs" />
+    <Compile Include="Enums\EDisciplinas.cs" />
+    <Compile Include="Enums\EPeriodos.cs" />
+    <Compile Include="Enums\ETipoProfessor.cs" />
+    <Compile Include="frmAdicionarDiretor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAdicionarDiretor.Designer.cs">
+      <DependentUpon>frmAdicionarDiretor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAdicionarProfessor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAdicionarProfessor.Designer.cs">
+      <DependentUpon>frmAdicionarProfessor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAvisoAlteração.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAvisoAlteração.Designer.cs">
+      <DependentUpon>frmAvisoAlteração.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAvisoAtenção.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAvisoAtenção.Designer.cs">
+      <DependentUpon>frmAvisoAtenção.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAvisoCorreto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAvisoCorreto.Designer.cs">
+      <DependentUpon>frmAvisoCorreto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAvisoErro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAvisoErro.Designer.cs">
+      <DependentUpon>frmAvisoErro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAvisoErroAdicionar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAvisoErroAdicionar.Designer.cs">
+      <DependentUpon>frmAvisoErroAdicionar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAvisoErroLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAvisoErroLogin.Designer.cs">
+      <DependentUpon>frmAvisoErroLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAvisoPreencher.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAvisoPreencher.Designer.cs">
+      <DependentUpon>frmAvisoPreencher.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAvisoVoltar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAvisoVoltar.Designer.cs">
+      <DependentUpon>frmAvisoVoltar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmEditarDiretor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEditarDiretor.Designer.cs">
+      <DependentUpon>frmEditarDiretor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmEditarProfessor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEditarProfessor.Designer.cs">
+      <DependentUpon>frmEditarProfessor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmEsqueceuSenha.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEsqueceuSenha.Designer.cs">
+      <DependentUpon>frmEsqueceuSenha.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmVisualizarProfessoresPEBIII.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmVisualizarProfessoresPEBIII.Designer.cs">
+      <DependentUpon>frmVisualizarProfessoresPEBIII.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Classes\Models\Disciplina.cs" />
+    <Compile Include="Classes\Models\EscolaProfessor.cs" />
+    <Compile Include="Classes\Models\Instituicao.cs" />
+    <Compile Include="Classes\Models\Supervisor.cs" />
+    <Compile Include="Classes\Models\Usuario.cs" />
+    <Compile Include="Classes\Models\Professor.cs" />
+    <Compile Include="Classes\Controllers\Professores.cs" />
+    <Compile Include="Classes\Models\Turma.cs" />
+    <Compile Include="Classes\Controllers\Turmas.cs" />
+    <Compile Include="Classes\Controllers\Usuarios.cs" />
+    <Compile Include="Enums\ETipoEnsino.cs" />
+    <Compile Include="Enums\ETipoUsuarios.cs" />
+    <Compile Include="frmAdicionarInstituição.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAdicionarInstituição.Designer.cs">
+      <DependentUpon>frmAdicionarInstituição.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAdicionarSupervisor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAdicionarSupervisor.Designer.cs">
+      <DependentUpon>frmAdicionarSupervisor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAdicionarTurma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAdicionarTurma.Designer.cs">
+      <DependentUpon>frmAdicionarTurma.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAvisoFechar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAvisoFechar.Designer.cs">
+      <DependentUpon>frmAvisoFechar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmEditarInstituição.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEditarInstituição.Designer.cs">
+      <DependentUpon>frmEditarInstituição.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmEditarSupervisor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEditarSupervisor.Designer.cs">
+      <DependentUpon>frmEditarSupervisor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmEditarTurma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEditarTurma.Designer.cs">
+      <DependentUpon>frmEditarTurma.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmInicialAtribuidor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmInicialAtribuidor.Designer.cs">
+      <DependentUpon>frmInicialAtribuidor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmInicialInstituição.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmInicialInstituição.Designer.cs">
+      <DependentUpon>frmInicialInstituição.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmVisualizarDiretores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmVisualizarDiretores.Designer.cs">
+      <DependentUpon>frmVisualizarDiretores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmVisualizarInstituições.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmVisualizarInstituições.Designer.cs">
+      <DependentUpon>frmVisualizarInstituições.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmVisualizarProfessores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmVisualizarProfessores.Designer.cs">
+      <DependentUpon>frmVisualizarProfessores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmVisualizarProfessoresPEBI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmVisualizarProfessoresPEBI.Designer.cs">
+      <DependentUpon>frmVisualizarProfessoresPEBI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmVisualizarProfessoresPEE.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmVisualizarProfessoresPEE.Designer.cs">
+      <DependentUpon>frmVisualizarProfessoresPEE.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmVisualizarSupervisores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmVisualizarSupervisores.Designer.cs">
+      <DependentUpon>frmVisualizarSupervisores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmVisualizarTurmas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmVisualizarTurmas.Designer.cs">
+      <DependentUpon>frmVisualizarTurmas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmAdicionarDiretor.resx">
+      <DependentUpon>frmAdicionarDiretor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAdicionarInstituição.resx">
+      <DependentUpon>frmAdicionarInstituição.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAdicionarProfessor.resx">
+      <DependentUpon>frmAdicionarProfessor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAdicionarSupervisor.resx">
+      <DependentUpon>frmAdicionarSupervisor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAdicionarTurma.resx">
+      <DependentUpon>frmAdicionarTurma.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAvisoAlteração.resx">
+      <DependentUpon>frmAvisoAlteração.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAvisoAtenção.resx">
+      <DependentUpon>frmAvisoAtenção.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAvisoCorreto.resx">
+      <DependentUpon>frmAvisoCorreto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAvisoErro.resx">
+      <DependentUpon>frmAvisoErro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAvisoErroAdicionar.resx">
+      <DependentUpon>frmAvisoErroAdicionar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAvisoErroLogin.resx">
+      <DependentUpon>frmAvisoErroLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAvisoFechar.resx">
+      <DependentUpon>frmAvisoFechar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAvisoPreencher.resx">
+      <DependentUpon>frmAvisoPreencher.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAvisoVoltar.resx">
+      <DependentUpon>frmAvisoVoltar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEditarDiretor.resx">
+      <DependentUpon>frmEditarDiretor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEditarInstituição.resx">
+      <DependentUpon>frmEditarInstituição.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEditarProfessor.resx">
+      <DependentUpon>frmEditarProfessor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEditarSupervisor.resx">
+      <DependentUpon>frmEditarSupervisor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEditarTurma.resx">
+      <DependentUpon>frmEditarTurma.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEsqueceuSenha.resx">
+      <DependentUpon>frmEsqueceuSenha.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmInicialAtribuidor.resx">
+      <DependentUpon>frmInicialAtribuidor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmInicialInstituição.resx">
+      <DependentUpon>frmInicialInstituição.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmVisualizarDiretores.resx">
+      <DependentUpon>frmVisualizarDiretores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmVisualizarInstituições.resx">
+      <DependentUpon>frmVisualizarInstituições.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmVisualizarProfessores.resx">
+      <DependentUpon>frmVisualizarProfessores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmVisualizarProfessoresPEBI.resx">
+      <DependentUpon>frmVisualizarProfessoresPEBI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmVisualizarProfessoresPEBIII.resx">
+      <DependentUpon>frmVisualizarProfessoresPEBIII.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmVisualizarProfessoresPEE.resx">
+      <DependentUpon>frmVisualizarProfessoresPEE.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmVisualizarSupervisores.resx">
+      <DependentUpon>frmVisualizarSupervisores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmVisualizarTurmas.resx">
+      <DependentUpon>frmVisualizarTurmas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Fontes\Gilroy-Regular.ttf" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 e x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="imagens\adicionar-usuario.png" />
+    <Content Include="imagens\botao-adicionar %281%29.png" />
+    <Content Include="imagens\exportar.png" />
+    <Content Include="imagens\importar.png" />
+    <Content Include="imagens\logoSozinha.png" />
+    <Content Include="imagens\olho.png" />
+    <Content Include="imagens\visivel.png" />
+    <None Include="Resources\luxa.org-inverted-037-como.png" />
+    <None Include="Resources\luxa.org-inverted-114-proibicao.png" />
+    <None Include="Resources\questionando %281%29.png" />
+    <None Include="Resources\luxa.org-inverted-187-saida.png" />
+    <None Include="Resources\luxa.org-inverted-180-aviso-1.png" />
+    <None Include="Resources\visivel.png" />
+    <None Include="Resources\olho.png" />
+    <None Include="Resources\importar.png" />
+    <None Include="Resources\exportar.png" />
+    <None Include="Resources\botao-adicionar %281%29.png" />
+    <None Include="Resources\adicionar-usuario.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

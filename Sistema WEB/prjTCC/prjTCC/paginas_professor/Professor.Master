@@ -1,0 +1,123 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Professor.master.cs" Inherits="prjTCC.paginas_professor.Professor" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/variaveis.css">
+    <link rel="stylesheet" href="../css/estiloGeral.css">
+        <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link rel="stylesheet" href="../css/responsivoGeral.css">
+    <link rel="shortcut icon" href="./../imagens/logoSozinha.png">
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div class="escondido bloqueioResposta"></div>
+        <div class="escondido bloqueio"></div>
+        <main>
+            <img src="../imagens/icones/menu.png" id="botaoMenu" alt="">
+            <section class="menu">
+                <div class="logo">
+                    <a href="dashboard.aspx"><img src="../../imagens/logo_branca.png" alt="logo_branco"></a>
+                </div>
+                <nav id="itensMenu">
+                    <a href="primeiraAtribuicao.aspx">
+                        <asp:Panel ID="atribuicao" runat="server" CssClass="itemUnico">
+                            <img src="../imagens/icones/atribuicao.png" alt="icone_fases">
+                            <p>Atribuição</p>
+                        </asp:Panel>
+                    </a>     
+                    <a href="anexos.aspx">
+                        <asp:Panel ID="anexos" runat="server" CssClass="itemUnico">
+                            <img src="../imagens/icones/atas.png" alt="icone_fases">
+                            <p>Anexos</p>
+                         </asp:Panel>
+                    </a>
+                    <a href="minhasAulas.aspx">
+                        <asp:Panel ID="minhasAulas" runat="server" CssClass="itemUnico">
+                            <img src="../imagens/icones/minhas_aulas.png" alt="icone_atas">
+                            <p>Minhas aulas</p>
+                        </asp:Panel>
+                    </a>
+                    <hr id="hrProfessor">
+                    <a href="configuracoes.aspx">
+                        <asp:Panel ID="configuracoes" runat="server" CssClass="itemUnico">
+                            <img src="../imagens/icones/configuracoes.png" alt="icone_fases">
+                            <p>Configurações</p>
+                        </asp:Panel>
+                    </a>
+                    <a href="../sair.aspx">
+                        <asp:Panel ID="sair" runat="server" CssClass="itemUnico">
+                            <img src="../imagens/icones/sair.png" alt="icone_sair">
+                            <p>Sair</p>
+                        </asp:Panel>
+                    </a>
+                </nav>
+                <svg id="imgInferiorMenu" viewBox="0 0 283 220" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M220.947 253.634C213.819 263.813 199.789 266.286 189.61 259.159L74.9288 178.858C64.7497 171.731 62.2759 157.701 69.4034 147.522C76.5309 137.343 90.5606 134.869 100.74 141.996L215.421 222.297C225.6 229.425 228.074 243.454 220.947 253.634Z" fill="#0D3B66"/>
+                    <path d="M167.435 331.557C160.3 341.731 146.269 344.195 136.095 337.06L19.9858 255.636C9.8118 248.501 7.34799 234.47 14.4828 224.296C21.6175 214.122 35.6491 211.658 45.8231 218.793L161.932 300.217C172.106 307.352 174.57 321.383 167.435 331.557Z" fill="#135390"/>
+                    <path d="M52.0188 138.296C44.8913 148.475 30.8615 150.949 20.6824 143.821C10.5032 136.694 8.02942 122.664 15.1569 112.485C22.2844 102.306 36.3142 99.8321 46.4933 106.96C56.6724 114.087 59.1462 128.117 52.0188 138.296Z" fill="#1769B5"/>
+                    <path d="M174.847 116.012C167.719 126.192 153.69 128.665 143.51 121.538L120.23 105.237C110.051 98.109 107.577 84.0793 114.704 73.9001C121.832 63.721 135.862 61.2472 146.041 68.3747L169.321 84.6761C179.501 91.8036 181.974 105.833 174.847 116.012Z" fill="#135390"/>
+                    <path d="M261.326 35.9917C254.199 46.1708 240.169 48.6447 229.99 41.5172C219.811 34.3897 217.337 20.3599 224.465 10.1808C231.592 0.00166139 245.622 -2.47217 255.801 4.65533C265.98 11.7828 268.454 25.8126 261.326 35.9917Z" fill="#0D3B66"/>
+                    <path d="M281.999 160.974L198.57 102.043C188.273 94.7694 185.795 80.5403 193.025 70.2137C200.121 60.0807 213.982 57.4169 224.328 64.1983L281.958 101.974L281.999 160.974Z" fill="#063A89"/>
+                    <path d="M282.253 201L199.644 146.884C189.028 139.929 186.267 125.573 193.547 115.177C200.516 105.223 214.131 102.607 224.293 109.268L282.253 147.26L282.253 201Z" fill="#1769B5"/>
+                    <path d="M232.408 290.543C225.281 300.722 211.251 303.196 201.072 296.068L86.3907 215.768C76.2116 208.64 73.7378 194.61 80.8653 184.431C87.9928 174.252 102.023 171.778 112.202 178.906L226.883 259.206C237.062 266.334 239.536 280.364 232.408 290.543Z" fill="#135390"/>
+                    <path d="M156.408 281.543C149.281 291.722 135.251 294.196 125.072 287.068L10.3907 206.768C0.211619 199.64 -2.26221 185.611 4.86528 175.431C11.9928 165.252 26.0226 162.778 36.2017 169.906L150.883 250.207C161.062 257.334 163.536 271.364 156.408 281.543Z" fill="#1769B5"/>
+                    <rect x="260.357" y="263.041" width="167.683" height="45" rx="22.5" transform="rotate(-145 260.357 263.041)" fill="#063A89"/>
+                </svg>       
+            </section>
+
+            <section class="escondido" id="areaNotificacoes">
+                <div id="tituloNotificacoes">
+                    <h1 class="SemMargin">Notificações</h1> 
+                    <img src="../../imagens/icones/xPreto.png" id="chis" alt="">
+                </div>
+
+                <div class="notificacoes">
+                </div>
+            </section>
+
+            <section class="conteudo">
+                <section class="conteudo-superior">
+                    <asp:ContentPlaceHolder ID="areaConteudoSuperior" runat="server"></asp:ContentPlaceHolder>
+                <div class="Conteudo" id="areaUsuario">
+                    <div id="notificacao">
+                        <div id="NumeroDeNotificacoesNaoLida"></div>
+                        <img src="../../imagens/icones/notificacao.png" alt="Icone notificação" >
+                    </div>
+                    <div id="infoUsuario">
+                        <div class="FotoUsuario">
+                            <asp:Panel ID="pnlIniciais" CssClass="pnlIniciais" runat="server">
+                                <asp:Literal ID="litIniciais" runat="server"></asp:Literal>
+                            </asp:Panel>
+                            <asp:Panel ID="pnlImgPerfil" CssClass="pnlImgPerfil" runat="server">
+                                <asp:Image ID="imgPerfilHeader" runat="server" />
+                            </asp:Panel>
+                        </div>
+                        <div id="NomeCargo">
+                            <p class="SemMargin" id="NomeUsuario"><asp:Literal ID="litNomePerfil" runat="server"></asp:Literal></p>
+                            <p class="SemMargin" id="CargoUsuario">professor(a)</p>
+                        </div>
+                    </div>  
+                </div>
+                </section>
+                <section class="conteudo-inferior">
+                    <asp:ContentPlaceHolder ID="areaConteudoinferior" runat="server">
+                        
+                    </asp:ContentPlaceHolder>
+                </section>
+            </section>
+            <asp:ContentPlaceHolder ID="areaPopUps" runat="server">
+                        
+            </asp:ContentPlaceHolder>
+        </main>
+        <asp:ContentPlaceHolder ID="codigoJS" runat="server"></asp:ContentPlaceHolder>
+        <script src="../js/scriptTabelas.js"></script>
+        <script src="../js/scriptNotificacoesProfessor.js"></script>
+        <script src="../js/scriptGeral.js"></script>
+    </form>
+</body>
+</html>

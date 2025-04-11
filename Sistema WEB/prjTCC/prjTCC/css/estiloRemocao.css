@@ -1,0 +1,7 @@
+.BotaoVerdeEscuro {
+    background-color: var(--Cor-3-degrade-1);
+}
+
+.BotaoVerdeClaro {
+    background-color: var(--Cor-3-degrade-2);
+}

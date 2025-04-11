@@ -1,0 +1,148 @@
+/* Estilização tabelas */
+.tabelaEscolas { height: 535px; }
+.tabelaEscolas table th, .tabelaProfessores table th, .tabelaEscolaEspecifica table th {
+    background-color: var(--Cor-1);
+    color: #fff;
+}
+.tabelaEscolas table tr, .tabelaProfessores table tr, .tabelaEscolaEspecifica table tr { background-color: #fff; }
+.tabelaEscolas table td:last-child p { margin: 0 }
+
+.tabelaEscolas::-webkit-scrollbar-thumb, .tabelaEscolaEspecifica::-webkit-scrollbar-thumb, .tabelaProfessores::-webkit-scrollbar-thumb { background: var(--Cor-1); }
+
+.posicao, .turma { width: 7%; }
+.codigo, .tipo { width: 10%; }
+.situacao { width: 55%; }
+
+.selecionado { 
+    background-image: url('../imagens/icones/setaPreta.png'); 
+    background-color: var(--Cor-2-degrade-7);
+}
+
+.atribuido { background-color: #30b0a16e !important; }
+.naoAtribuido { color: var(--Cor-Alerta); }
+
+.situacaoEscola td:last-child { display: flex; }
+
+.cinza, .sucesso, .medio, .alerta { height: 19px; border-radius: 20px; }
+.cinza { width: 95%; background-color: #E8E4E4; }
+.sucesso { width: 80%; background-color: var(--Cor-Sucesso); }
+.medio { width: 65%; background-color: #EBA352; }
+.alerta { width: 47%; background-color: var(--Cor-Alerta); }
+
+.tabelaFixa a { color: black; }
+
+/* Estilização filtros */
+#filtrosProfessores { justify-content: space-between; }
+#filtrosEscolas { gap: 40px; }
+
+#filtrosProfessores, #filtrosEscolas {
+    width: 100%;
+    display: flex;
+    gap: 40px;
+    margin-bottom: 40px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+tbody .situacaoEscola td:last-child p  {margin-left:15px;}
+
+/* Professor Atribuído */
+#areaProfessor {
+    display: flex;
+    gap: 70px;
+    background-color: var(--Cor-5-degrade-4);
+    padding: 40px 30px;
+    border-radius: 20px;
+    margin-top: 40px;
+    background-size: 400px;
+    background-position-x: 103%;
+    background-position-y: 112%;
+    background-repeat: no-repeat;
+    background-image: url(../imagens/grafismoProfessorAtribuido.png);
+}
+
+#infoProfessor {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: 23%;
+}
+#Disciplina{
+    width:200px;
+}
+#Disciplina2{
+    width:150px;
+}
+#Nome {
+    width:300px;
+}
+#CodigoFe
+{
+    width:80px;
+}
+
+
+#infoProfessor #areaFoto {
+    display: flex;
+    justify-content: center;
+}
+
+#infoProfessor #areaFoto .FotoUsuario {
+    width: 222px;
+    border-radius: 100%;
+    height: 222px;
+    object-fit: cover;
+}
+
+#infoProfessor .pnlIniciais {
+    font-size: 75px;
+}
+
+#infoGeral h1 { font-size: 2.7rem; }
+#infoGeral h2 { font-size: 1.8rem; }
+#infoGeral h3 { font-size: 1.6rem; }
+
+#infoGeral h1, #infoGeral h2, #infoGeral h3, #infoClassificacao p, #infoEscola p  { margin: 0;  }
+#infoGeral h2, #infoGeral h3 { font-family: var(--Font-family-semibold); }
+
+#infoClassificacao h4, #infoEscola h4 { font-family: var(--Font-family-semibold); margin-bottom: 15px; }
+#infoClassificacao p { font-size: var(--Paragrafo-size-medium); }
+
+#tabelasProfessor { width: 70%; }
+
+#aulasProfessor {
+    height: 45%;
+    margin-bottom: 70px;
+}
+#aulasProfessor .tabelaFixa { max-height: 270px; }
+#atasProfessor .tabelaFixa { max-height: 235px; }
+
+#tabelasProfessor table th {
+    background-color: var(--Cor-5);
+    color: #fff;
+}
+#tabelasProfessor table tr { background-color: #fff; }
+#tabelasProfessor table td, #tabelasProfessor table th { border: 1px solid var(--Cor-5);}
+#tabelasProfessor .tabelaFixa::-webkit-scrollbar-thumb { background: var(--Cor-5); border: 3px solid var(--Cor-5-degrade-4) !important;  }
+
+#aulasProfessor h2 { margin-top: 0; }
+
+#filtrosEscolas .selectInstituicao {
+    /*width: 70%;*/
+}
+
+/* Responsivo */
+@media screen and (max-width: 768px) {    
+    
+    /* Filtros */
+    #filtrosProfessores, #filtrosEscolas { 
+        flex-wrap: wrap; 
+        column-gap: 40px;
+        row-gap: 20px;
+    }
+
+    #selectAno, #selectTipo { width: 44%; }
+    #selectDisciplina { width: 100%; }
+
+}
+

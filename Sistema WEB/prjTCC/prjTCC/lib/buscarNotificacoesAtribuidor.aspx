@@ -1,0 +1,1 @@
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="buscarNotificacoesAtribuidor.aspx.cs" Inherits="prjTCC.lib.buscarNotificacoes" %>

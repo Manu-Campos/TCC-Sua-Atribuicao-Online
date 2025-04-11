@@ -1,0 +1,120 @@
+.tabelaFixa thead th{
+    background-color: var(--Cor-5-degrade-3);
+    color: var(--Cor-6);
+    border: var(--Cor-5) 1px solid !important;
+}
+table th:last-child,table td:last-child{border-right: 0;}
+table tr { background-color: var(--Cor-6-degrade-7);}
+.tabelaFixa tbody td {border: 1px solid var(--Cor-5);}
+
+.tabelaFixa::-webkit-scrollbar-thumb { background: var(--Cor-5-degrade-3); }
+.tabelaFixa
+{
+    width: 100%;
+    height: auto;
+}
+#Posicao {width: 10%;}
+#Codigo {width: 12%;}
+
+input[type="submit"] {background-color: var(--Cor-5);}
+
+select{background-color: var(--Cor-5-degrade-3);}
+select:focus {
+    outline: solid 2px var(--Cor-6);
+    outline-offset: -2px;
+}
+
+.tabelaFixa::-webkit-scrollbar-thumb {
+    border: 3px solid white;
+}
+
+.checkPrimeiraAtribuicao::before { border: thin solid var(--Cor-5); }
+.checkPrimeiraAtribuicao:checked::before { background-color: var(--Cor-5); }
+.tabelaPrimeiraAtribuicao .linhaSelecionada { background-color: var(--Cor-5-degrade-7) !important; }
+
+#infoProfessor {
+    height: 160px;
+    background-color: var(--Cor-5-degrade-3);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    background-image: url(../imagens/grafismoProfessorAtribuido.png);
+    background-repeat: no-repeat;
+    background-position-x: 105%;
+    background-position-y: -6px;
+    background-size: 28%;
+}
+
+#infoProfessor #areaFoto .FotoUsuario {
+    width: 120px;
+    margin: 20px;
+}
+
+#txtIniciais {
+    font-size: 40px;
+}
+
+#infoProfessor .botao {
+    justify-content: flex-end;
+}
+
+.tituloPEBI { 
+    flex-direction: column;
+    gap: 5px;
+}
+
+.infoProfessorPerdeuTempo h4 { font-size: 30px; }
+
+.infoProfessorPerdeuTempo, .selecoesProfessorPerdeuTempo { width: 100%; }
+
+.selecoesProfessorPerdeuTempo #tabelas { display: flex; justify-content: space-between; }
+
+.selecoesProfessorPerdeuTempo #tabelas #tabela1, .selecoesProfessorPerdeuTempo #tabelas #tabela2 { width: 100%; }
+.selecoesProfessorPerdeuTempo #tabelas #tabela1 .tabelaFixa, .selecoesProfessorPerdeuTempo #tabelas #tabela2 .tabelaFixa { max-height: 300px; }
+
+.selecoesProfessorPerdeuTempo h4 { font-size: var(--Subtitulo-font-size); }
+
+.turmaIndisponivel { background: #DDDDDD !important; }
+.turmaIndisponivel td { border: 1px solid var(--Cor-Alerta) !important; }
+.turmaIndisponivel .tdX { width: 8%; }
+.turmaIndisponivel img { width: 50%; }
+
+.botao {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.botao p {
+    font-size: 17px !important;
+}
+
+.botao input, .botao p {
+    margin-top: 35px;
+}
+
+@media screen and (max-width: 768px) {
+    select {
+        width: 30%;
+    }
+
+    #infoProfessor {
+        flex-direction: column;
+        height: 40vh;
+        background-position: bottom -40px right -40px;
+        background-repeat: no-repeat;
+        background-position-x: 27px;
+        background-position-y: 80px;
+        background-size: 100%;
+        padding: 10px;
+    }
+
+    #tabela1, #tabela2 {
+        width: 100%;
+    }
+
+    .selecoesProfessorPerdeuTempo #tabelas #tabela2 {
+        width: 100%;
+    }
+}

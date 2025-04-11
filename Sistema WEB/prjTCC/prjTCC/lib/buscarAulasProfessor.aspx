@@ -1,0 +1,1 @@
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="buscarAulasProfessor.aspx.cs" Inherits="prjTCC.lib.buscarAulasProfessor" %>

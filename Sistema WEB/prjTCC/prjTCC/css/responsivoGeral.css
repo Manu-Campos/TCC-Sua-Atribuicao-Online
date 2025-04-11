@@ -1,0 +1,281 @@
+@media screen and (min-width: 2560px) {
+    .menu {
+        width: 12%;
+        z-index: 2;
+    }
+    
+    .conteudo { margin-left: 16%; }
+}
+
+
+@media screen and (max-width: 1024px) {
+
+    .conteudo {
+        width: 78%;
+        margin: 0 0 0 20.5%;
+        padding-bottom: 20px;
+    }
+
+    .menu {
+        width: 19%;
+        z-index: 4;
+        overflow-y: auto;
+    }
+
+    .menu svg {
+        bottom: -250px;
+    }
+    
+    /* Filtros de Todas as Páginas */
+    #Inicio, #filtrosEscolas, #filtrosProfessores, #filtrosAtas, #filtrosRelatorio {
+        flex-wrap: wrap;
+        gap: 15px!important;
+    }
+    #Inicio { gap:25px; }
+    #digitarFiltro { width: 100%; }
+    #selectAno, #selectTipo { width: 17%; }
+    #selectDisciplina { width: 25%; }
+    #areaFiltros {
+        width: 100%;
+        gap: 10px;
+    }
+
+    .selectEscola {
+        min-width: 200px;
+    }
+        /* Fases */
+        .infoFase { flex-direction: row; flex-wrap: wrap; } 
+
+    /* Configurações */
+    #areaPerfil { width: 90%; }
+
+    #andamentoBloco {
+        width: 60%;
+    }
+}
+@media screen and (min-width: 950px) and (max-width:1200px)
+{
+    #areaLogin{width:50%;}
+
+    /*Dashboard*/
+
+    #faseDashboard {
+        width: 65%
+    }
+    #fase {
+        width:34%;
+    }
+
+    #andamentoBloco {
+        width:55%;
+    }
+
+    .selectEscola {
+        min-width: 200px;
+    }
+
+    #areaSuaVez {
+        width: 30%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    
+    /* Menu */
+    .menu { left: -100%; width: 85%; position: absolute; z-index: 4; }
+    #botaoMenu { display: block; }
+    .logo { padding: 40px 20px; width: 75%; }
+
+    .itemUnico img, .multiplaEscolha img { width: var(--Icone-24); }
+    .itemUnico p, .selectMenu div p { font-size: var(--Subtitulo-font-size); }
+    #itensMenu
+    {   
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+    }
+    #itensMenu hr { width: 99%; }
+
+    .linhaDados {
+        width: 100%;
+    }
+    
+    #imgInferiorMenu { width: 90%; right: 0px; }
+    
+    /* Geral */
+    #nomeUsuario h1 { text-align: center; }
+    .areaConteudo {
+        padding: 30px;
+        gap: 20px;
+        display: flex;
+        align-items: center;
+    }
+    .conteudo { width: 90%; margin: auto; }
+    .conteudo-esquerda { width: 100%; }
+    .conteudo-superior { padding: 20px 0 50px 0; flex-direction: column-reverse; }
+    .areaPopUp {padding: 30px 25px; width:80%;}
+    
+    .areaPopUp {
+        padding: 30px 25px;
+        width: 80%;
+    }
+
+    #tabelas {
+        display: flex;
+        gap: 40px;
+        flex-direction: column-reverse;
+    }
+    #mensAviso
+    {
+        width:90%;
+    }
+    #envio, #historico
+    {
+        align-items:flex-start;
+    }
+    #divEnvio {
+        width: 50%;
+    }
+    #filtrosAviso div:first-child {
+        width: 50%;
+    }
+    #tabela1, #tabela2 {
+        width: 100%;
+    }
+    .tabelaFixa{
+        width:100%;
+    }
+    #filtrosAviso {
+        width: 100%;
+        flex-direction: column;
+    }
+    /* Tabelas */
+    table { width: 270%; }
+    .tabelaFixa::-webkit-scrollbar {display: none; }
+    .tabelaFixa tbody td {position: unset;}
+    #tabelas {flex-direction:column;}
+    #tabela1, #tabela2 {
+        width: 100%;
+    }
+
+    /* Títulos */
+    .tituloPagina, .Subtitulo, .tituloFiltrar { margin-left: 5px; }
+    .tituloFiltrar { margin-top: 35px; }
+
+    /* Fases */
+    .Fases { width: 20%; min-width: auto; font-size: 9px;}
+    #areaFaseAtual { width: 100%; height: 25px; }
+    .infoFase, .areaInfoFaseAtual { flex-direction: column; gap: 10px; }
+    .infoFase input { width: 82%; }
+    #EscolhaFase { width: 100%; }
+    #Legenda{margin-top:30px; flex-direction:column;}
+    .dtsFases {display:none;}
+    #graficoAtribuicao {
+        width: 270px;
+        height: 140px;
+    }
+    #dadosFase{
+        width:100%;
+    }
+    /* Filtros de Todas as Páginas */
+    #Inicio, #filtrosEscolas, #filtrosProfessores, #filtrosAtas, #filtrosRelatorio {
+        flex-wrap: wrap;
+        gap: 10px !important
+    }
+    #Inicio { gap:25px; }
+    select, #digitarFiltro { width: 100%; }
+    #selects { flex-direction: column; }
+
+
+    /* Textos */
+    .txtNome, .txtEmail, .txtTelefone, .txtDataN, .Senhas, 
+    .txtDiretor, .txtTipo, .txtProntuario { width: 100%; }
+
+    /* Professores */
+    #infoProfessor, #tabelasProfessor, #escolaSede, #segundaEscola, #jornada { width: 100%; }
+    #areaProfessor { height: auto; background-position: bottom -45px right -35px; flex-direction: column; }
+
+    #infoProfessor {
+        flex-direction: column;
+        height: 40vh;
+        background-position: bottom -40px right -40px;
+        background-repeat: no-repeat;
+        background-position-x: 27px;
+        background-position-y: 80px;
+        background-size: 100%;
+        padding: 10px;
+    }
+
+    /* Selects */
+    #selectAno, #selectTipo { width: 30%; }
+    #selectEscola, #selectDisciplina { width: 58.5%; }
+    
+    /* Configurações */
+    #areaPerfil { width: auto; }
+    #areaAssinaturaSeta { width: calc(100% + 20px); }
+    #areaConfiguracao { flex-direction: column-reverse; }
+  
+    /* ???? */
+    .QuadradoLegenda { width: 20px;height: 20px; }
+    .LinhaLegenda { gap: 15px; }
+    #Legenda { gap:10px; justify-content: space-between; }
+    #Linha { width: calc(100% + 50px); }
+
+    /* Avisos */
+    #areaDivAvisos { flex-direction: column; gap: 15px; }
+    #areaDivAvisos .areaConteudo { width: auto; }
+    #filtrosAviso div:last-child { width: 65%; }
+
+    /*Notificações*/
+    #areaNotificacoes
+    {
+        top: 20%;
+        transform: translate(-50%, -20%);
+        left: 50%;
+        right: unset;
+    }
+    /*Dashboard*/
+    #fase,#andamentoBloco,#professores {width:100%}
+    #faseDashboard {width:100%}
+
+    #areaFiltros {
+        overflow: auto;
+        width: 100%;
+        display: flex;
+        gap: 10px;
+        padding: 0;
+        flex-direction: column;
+    }
+
+    .selectAno {
+        width: 100%;
+    }
+
+    #filtros {
+        display: flex;
+        gap: 10px !important;
+    }
+
+    #areaSuaVez {
+        width: 77%;
+    }
+}
+ 
+@media screen and (max-width:380px) {
+
+    /* Selects */
+    #selectAno, #selectTipo { width: 28%; }
+
+    /* Menu */
+    .logo { width: 70% ;padding: 20px; }
+    .itemUnico img { width: var(--Icone-20); }
+    .itemUnico p, .selectMenu div p  { font-size: var(--Paragrafo-size-medium); }
+
+    #imgInferiorMenu { width: 80%; right: 0px; }
+
+    /* ???? */
+    .FonteLegenda{font-size:1.3rem;}
+    .QuadradoLegenda {width: 16px;height: 16px;}
+    .LinhaLegenda{  gap: 8px;}
+    #Legenda { gap:10px; justify-content: space-between; }
+}

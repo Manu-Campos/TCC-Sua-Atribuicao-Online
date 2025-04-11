@@ -1,0 +1,114 @@
+:root {
+    /*Borda*/
+    --Border-radius: 20px;
+    /*Cores*/ 
+    --Cor-fundo: #DEEEFF;
+    --Cor-Alerta: #CB2C2A;
+    --Cor-Foco: #1769B5;
+    --Cor-Sucesso: #30B0A1;
+    --Cor-Input: #EBF4FD;
+    /*Cor 1 azul*/
+    --Cor-1: #031D44;
+    --Cor-1-degrade-1: #063A89;
+    --Cor-1-degrade-2: #0853C4;
+    --Cor-1-degrade-3: #146EF5;
+    --Cor-1-degrade-4: #4F92F8;
+    --Cor-1-degrade-5: #76AAF9;
+    --Cor-1-degrade-6: #9DC3FB;
+    --Cor-1-degrade-7: #C4DBFD;
+    /*Cor 2*/
+    --Cor-2: #0D3B66;
+    --Cor-2-degrade-1: #135390;
+    --Cor-2-degrade-2: #1769B5;
+    --Cor-2-degrade-3: #2688E3;
+    --Cor-2-degrade-4: #4A9CE8;
+    --Cor-2-degrade-5: #6FAFEC;
+    --Cor-2-degrade-6: #A5CDF3;
+    --Cor-2-degrade-7: #C9E1F8;
+    /*Cor 3*/
+    --Cor-3: #238075;
+    --Cor-3-degrade-1: #279084;
+    --Cor-3-degrade-2: #30B0A1;
+    --Cor-3-degrade-3: #3FCABA;
+    --Cor-3-degrade-4: #7FDCD1;
+    --Cor-3-degrade-5: #9FE5DD;
+    --Cor-3-degrade-6: #BFEDE8;
+    --Cor-3-degrade-7: #DFF6F4;
+    --Cor-3-degrade-8: #56A198;
+    /*Cor 4*/
+    --Cor-4: #FF4F18;
+    --Cor-4-degrade-1: #FF6332;
+    --Cor-4-degrade-2: #FF764B;
+    --Cor-4-degrade-3: #FF8A65;
+    --Cor-4-degrade-4: #FF9D7F;
+    --Cor-4-degrade-5: #FFB198;
+    --Cor-4-degrade-6: #FFC4B2;
+    --Cor-4-degrade-7: #FFD8CC;
+    /*Cor 5*/
+    --Cor-5: #FA9F42;
+    --Cor-5-degrade-1: #FBAD60;
+    --Cor-5-degrade-2: #FBB874;
+    --Cor-5-degrade-3: #FCC288;
+    --Cor-5-degrade-4: #FCCC9C;
+    --Cor-5-degrade-5: #FDD6AF;
+    --Cor-5-degrade-6: #FDE0C3;
+    --Cor-5-degrade-7: #FEEBD7;
+    /* Cor 6 */
+    --Cor-6: #000000;
+    --Cor-6-degrade-1: #1F1F1F;
+    --Cor-6-degrade-2: #3D3D3D;
+    --Cor-6-degrade-3: #5C5C5C;
+    --Cor-6-degrade-4: #7A7A7A;
+    --Cor-6-degrade-5: #999999;
+    --Cor-6-degrade-6: #B8B8B8;
+    --Cor-6-degrade-7: #FFFFFF;
+    /*Imagens*/
+    --Icone-16: 16px;
+    --Icone-20: 20px;
+    --Icone-24: 24px;
+    --Icone-30: 30px;
+    --Icone-32: 32px;
+    --Icone-40: 40px;
+    --Icone-45: 45px;
+    /*Font-Family's */
+    --Font-family-light: "Gilroy-Light";
+    --Font-family-regular: "Gilroy-Regular";
+    --Font-family-medium: "Gilroy-Medium";
+    --Font-family-semibold: "Gilroy-Medium";
+    --Font-family-bold: "Gilroy-Bold";
+    /*Títulos*/
+    --Titulo-h1: 3rem;
+    --Titulo-h2: 2.4rem;
+    --Titulo-h3: 2.2rem;
+    --Titulo-h4: 2.2rem;
+    --Titulo-aleatorio: 2.8rem;
+    /*Subtítulos*/
+    --Subtitulo-font-size: 1.8rem;
+    --Subtitulo-font-family-semibold: "Gilroy-SemiBold";
+    --Subtitulo-font-family-medium: "Gilroy-Medium";
+    /* Parágrafo */
+    --Paragrafo-size-regular: 1.4rem;
+    --Paragrafo-style-regular: "Gilroy-Regular";
+    --Paragrafo-size-medium: 1.6rem;
+    --Paragrafo-style-medium: "Gilroy-Medium";
+    /*Cargo usuário*/
+    --Cargo-size: 1.2rem;
+    /* Placeholder */
+    --Placeholder-font-size: 1.4rem;
+    --Placeholder-style: 'Gilroy-Regular';
+    /* Label */
+    --Label-font-size: 1.6rem;
+    --Label-style: "Gilroy-Medium";
+    /* Entrelinhas */
+    --Entrelinha-font-size: 1.2rem;
+    --Entrelinha-style-regular: "Gilroy-Regular";
+    --Entrelinha-style-medium: "Gilroy-Medium";
+    /* Padding Botões */
+    --Botao-padding: 10px 25px 10px 25px;
+    /* Padding Inputs */
+    --Input-padding: 15px 20px 15px 20px;
+    /* Padding Barra fixa */
+    --Barra-padding: 8px 25px 8px 25px;
+    /* Padding Blocos */
+    --Bloco-padding: 30px 40px;
+}

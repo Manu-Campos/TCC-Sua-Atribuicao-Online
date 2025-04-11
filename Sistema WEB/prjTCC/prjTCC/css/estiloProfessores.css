@@ -1,0 +1,86 @@
+/* Estilização tabelas */
+#Posicao, #Tipo { width: 10%; }
+#Codigo {
+    width: 80px;
+}
+
+.tabelaProfessores thead th{
+    background-color: var(--Cor-2-degrade-3);
+    color: var(--Cor-6);
+    border: var(--Cor-2) 1px solid !important;
+}
+.tabelaProfessores th:last-child, .tabelaProfessores td:last-child { border-right: 0; }
+.tabelaProfessores tr { background-color: var(--Cor-6-degrade-7);}
+.tabelaProfessores tbody td {border: 1px solid var(--Cor-2);}
+
+.tabelaProfessores a { color: black; }
+
+.tabelaProfessores::-webkit-scrollbar-thumb { background: var(--Cor-2-degrade-3); }
+
+#Disciplina {
+    width: 150px;
+}
+
+/* Professor Atribuído */
+#areaProfessor {
+    display: flex;
+    gap: 70px;
+    background-color: var(--Cor-2-degrade-5);
+    padding: 40px 30px;
+    border-radius: 20px;
+    margin-top: 40px;
+    height: 620px;
+    background-size: 400px;
+    background-position-x: 103%;
+    background-position-y: 112%;
+    background-repeat: no-repeat;
+    background-image: url(../imagens/grafismoProfessorAtribuidoEscola.png);
+}
+
+#infoProfessor {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: 23%;
+}
+
+#infoGeral h1 { font-size: 2.7rem; }
+#infoGeral h2 { font-size: 1.8rem; }
+#infoGeral h3 { font-size: 1.6rem; }
+
+#infoGeral h1, #infoGeral h2, #infoGeral h3, #infoClassificacao p, #infoEscola p  { margin: 0;  }
+#infoGeral h2, #infoGeral h3 { font-family: var(--Font-family-semibold); }
+
+#infoClassificacao h4, #infoEscola h4 { font-family: var(--Font-family-semibold); margin-bottom: 15px; }
+#infoClassificacao p { font-size: var(--Paragrafo-size-medium); }
+
+/* Estilização tabela do professor */
+#tabelasProfessor { width: 70%; }
+#aulasProfessor .tabelaFixa { height: 270px; }
+#atasProfessor .tabelaFixa { height: 235px; }
+
+#tabelasProfessor table th {
+    background-color: var(--Cor-2-degrade-3);
+    color: #fff;
+}
+#tabelasProfessor table tr { background-color: #fff; }
+#tabelasProfessor table td, #tabelasProfessor table th { border: 1px solid var(--Cor-2-degrade-3);}
+#tabelasProfessor .tabelaFixa::-webkit-scrollbar-thumb { background: var(--Cor-2-degrade-3); border: 3px solid var(--Cor-2-degrade-5) !important;  }
+
+#aulasProfessor h2 { margin-top: 0; }
+
+#infoProfessor #areaFoto {
+    display: flex;
+    justify-content: center;
+}
+
+#infoProfessor #areaFoto .FotoUsuario {
+    width: 222px;
+    border-radius: 100%;
+    height: 222px;
+    object-fit: cover;
+}
+
+#infoProfessor .pnlIniciais {
+    font-size: 75px;
+}

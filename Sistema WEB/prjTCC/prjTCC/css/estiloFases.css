@@ -1,0 +1,162 @@
+h3, .infoFase, select, #Legenda, .dtsFases, .areaCriarFase, .areaAguardandoFase, .areaInfoFaseAtual, #coresDatas, .areaCriarFase, #conteudoInferior_pnlCriarFase 
+{
+    width: 100%;
+}
+.areaConteudo,.areaCriarFase
+{
+    flex-direction: column;     
+    align-items: end;
+    gap: 30px; 
+}
+#graficoAtribuicao {
+    width: 410px;
+    height: 230px;
+    border-radius: var(--Border-radius);
+}
+
+.DatasCdFase p {
+    font-family: var(--Font-family-semibold);
+    font-size: 12px;
+    color: var(--Cor-6-degrade-7);
+}
+.DatasCdFase
+{
+    justify-content: space-between;
+    align-items: center;
+    width: 16%;
+    padding: 0 10px;
+    box-sizing: border-box;
+}
+#coresDatas {
+    position: relative;
+}
+
+#areaCoresFases {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 25px;
+    z-index: 1; 
+
+}
+
+.dtsFases {
+    position: absolute;
+    top: 5px;
+    left: 0;
+    gap:10px;
+    z-index: 2;
+}
+.areaInfoFaseAtual 
+{
+    gap: 60px;
+    background-color: var(--Cor-6-degrade-7);
+    padding: var(--Bloco-padding);
+    margin-top: 40px;
+    border-radius: var(--Border-radius);
+    width: fit-content;
+    align-items: center;
+}
+
+.infoFase, #areaCoresFases, #Legenda, .LinhaLegenda, .dtsFases, #areaBtn, .areaCriarFase, .DatasCdFase, .areaInfoFaseAtual, #dadosFase, #dadosFaseAtual {
+    display: flex;
+}
+
+.infoFase {
+    gap:40px;
+    justify-content:space-between;
+}
+
+.Fases { width: 20%; display: block; }
+.Label{ font-family: var(--Font-family-semibold)}
+.pFases, #nomeFaseAtual, #periodoFaseAtual {font-family: var(--Font-family-bold);}
+
+#nomeFaseAtual {
+    font-size: var(--Titulo-aleatorio);
+}
+#periodoFaseAtual 
+{
+    font-size: var(--Subtitulo-font-size);
+}
+#dadosFase, #dadosFaseAtual {
+flex-direction: column;
+}
+#dadosFase {
+    gap: 35px;
+    height: fit-content;
+}
+#dadosFaseAtual {gap:10px}
+
+.pFases:first-child {
+font-size: var(--Subtitulo-font-size);
+}
+.pFases:last-child {
+    font-size: var(--Paragrafo-size-regular)
+}
+#PreAtribuicao
+{
+    background-color: var(--Cor-4);
+    border-radius: 20px 0 0 20px;
+}
+
+.PrimeiraAtribuicao { background-color: var(--Cor-5); }
+.Remocao { background-color: var(--Cor-3-degrade-2); }
+.SegundaAtribuicao { background-color: var(--Cor-3); }
+.CargaComplementar { background-color: var(--Cor-1-degrade-1); }
+
+#Trocas { background-color: var(--Cor-2-degrade-1); border-radius: 0 20px 20px 0; }
+
+select { border: 2px solid var(--Cor-2);}
+
+input
+{
+    appearance: none;
+    padding: 10px 25px;
+    border-radius: var(--Border-radius);
+    border: 2px solid var(--Cor-2);
+    background-position: right 20px top 50% ;
+    background-size: 16px;
+    background-repeat: no-repeat;
+}
+
+input[type="date"] { background-image: url('../imagens/icones/calendario.png'); }
+input[type="time"] { background-image: url('../imagens/icones/relogio.png'); }
+
+input[type="date"]::-webkit-calendar-picker-indicator,input[type="time"]::-webkit-calendar-picker-indicator
+{
+   width: 0;
+   padding-left: 20px;
+}
+
+#areaBtn 
+{
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+}
+
+input[type="submit"] {background-color: var(--Cor-2-degrade-1);}
+
+
+#PreAtribuicaoQ { background-color: var(--Cor-4) }
+#TrocasQ { background-color: var(--Cor-2-degrade-1); }
+
+.QuadradoLegenda
+{
+    display: block;
+    width: 25px;
+    border-radius: 5px ;
+    height: 25px
+}
+
+.LinhaLegenda { align-items: center; gap: 20px;}
+.FonteLegenda{ font-family: var(--Font-family-bold);}
+
+#Legenda { justify-content: space-around;margin-top:30px; }
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {   
+
+    .infoFase { flex-direction: column; }
+
+}
